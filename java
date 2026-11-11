@@ -158,10 +158,10 @@ public class EmployeeDatabaseApp {
 
         
         manager.hireEmployee("Mary Angel", 85000.0, 8.5);
-        manager.hireEmployee("Nicole", 110000.0, 5.2);
+        manager.hireEmployee("Nicole", 110000.0, 9.5);
         manager.hireEmployee("Clark", 62000.0, 7.8);
         manager.hireEmployee("Lorraine", 95000.0, 9.1);
-        manager.hireEmployee("Roujeil", 6700.0, 5.9); //pakichange na lang ng name kasi idk the spelling
+        manager.hireEmployee("Roujeil", 67000.0, 8.2); //pakichange na lang ng name kasi idk the spelling
 
         int choice = 0;
         do {
