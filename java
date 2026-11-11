@@ -154,7 +154,7 @@ class DepartmentManager {
 public class EmployeeDatabaseApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        DepartmentManager manager = new DepartmentManager("Engineering & TechReclaim");
+        DepartmentManager manager = new DepartmentManager("ITEN03 Group1");//pakipalitan ng totoong group naten, thanksss -Lorraine
 
         
         manager.hireEmployee("Mary Angel", 85000.0, 8.5);
@@ -165,9 +165,9 @@ public class EmployeeDatabaseApp {
 
         int choice = 0;
         do {
-            System.out.println("\n=======================================");
-            System.out.println("    TECHRECLAIM EMPLOYEE DATABASE       ");
-            System.out.println("=======================================");
+            System.out.println("_________________________________________");
+            System.out.println("         GROUP 1 EMPLOYEE DATABASE       ");//nakalimutan ano group tayo
+            System.out.println("_________________________________________");
             System.out.println("1. View Team Ranked by Salary");
             System.out.println("2. View Team Ranked by Productivity");
             System.out.println("3. Hire New Employee");
