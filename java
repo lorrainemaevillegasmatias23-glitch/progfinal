@@ -3,12 +3,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-// Class 1: Employee
 class Employee {
     private String name;
     private double salary;
-    private double productivityRating; // scale of 1.0 to 10.0
-
+    private double productivityRating; 
+    
     public Employee(String name, double salary, double productivityRating) {
         this.name = name;
         this.salary = salary;
@@ -39,20 +38,19 @@ class Employee {
         this.productivityRating = productivityRating;
     }
 
-    // Required method 1 (excluding getters/setters)
     public void givePerformanceReview(double bonus, double newRating) {
         this.salary += bonus;
         this.productivityRating = newRating;
     }
 
-    // Required method 2 (excluding getters/setters)
+   
     public String getEmployeeSummary() {
         return String.format("Employee: %-15s | Salary: $%,10.2f | Productivity: %.1f/10.0", 
                 name, salary, productivityRating);
     }
 }
 
-// Class 2: DepartmentManager
+
 class DepartmentManager {
     private String departmentName;
     private ArrayList<Employee> teamMembers;
@@ -78,15 +76,14 @@ class DepartmentManager {
         this.teamMembers = teamMembers;
     }
 
-    // Required method 1 (excluding getters/setters): Hire new employee
+    
     public void hireEmployee(String name, double salary, double rating) {
         Employee newEmp = new Employee(name, salary, rating);
         teamMembers.add(newEmp);
         System.out.println("[SUCCESS] Hired new team member: " + name);
     }
 
-    // Required method 2 (excluding getters/setters): Audit and fire underperformers 
-    // (earning above-average salary but below-average productivity)
+    
     public void auditAndTrimStaff() {
         if (teamMembers.isEmpty()) {
             System.out.println("No employees in the department to audit.");
@@ -154,17 +151,17 @@ class DepartmentManager {
     }
 }
 
-// Class 3: Main Test Class
 public class EmployeeDatabaseApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         DepartmentManager manager = new DepartmentManager("Engineering & TechReclaim");
 
-        // Pre-populate some employees for testing
-        manager.hireEmployee("Alice Smith", 85000.0, 8.5);
-        manager.hireEmployee("Bob Jones", 110000.0, 5.2); // Above avg salary, low productivity -> audit target
-        manager.hireEmployee("Charlie Brown", 62000.0, 7.8);
-        manager.hireEmployee("Diana Prince", 95000.0, 9.1);
+        
+        manager.hireEmployee("Mary Angel", 85000.0, 8.5);
+        manager.hireEmployee("Nicole", 110000.0, 5.2);
+        manager.hireEmployee("Clark", 62000.0, 7.8);
+        manager.hireEmployee("Lorraine", 95000.0, 9.1);
+        manager.hireEmployee("Roujeil", 6700.0, 5.9); //pakichange na lang ng name kasi idk the spelling
 
         int choice = 0;
         do {
@@ -180,7 +177,7 @@ public class EmployeeDatabaseApp {
 
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
-                scanner.nextLine(); // consume newline
+                scanner.nextLine(); 
 
                 switch (choice) {
                     case 1:
@@ -218,7 +215,7 @@ public class EmployeeDatabaseApp {
                                 scanner.next();
                             }
                         }
-                        scanner.nextLine(); // consume newline
+                        scanner.nextLine();
                         manager.hireEmployee(name, salary, rating);
                         break;
                     case 4:
@@ -232,7 +229,7 @@ public class EmployeeDatabaseApp {
                 }
             } else {
                 System.out.println("[ERROR] Invalid input. Please enter an integer.");
-                scanner.next(); // clear invalid token
+                scanner.next(); //para sa inavalid input :D
             }
         } while (choice != 5);
 
