@@ -239,6 +239,4 @@ public class EmployeeDatabaseApp {
         scanner.close();
     }
 }
-```[cite: 1]
 
----
