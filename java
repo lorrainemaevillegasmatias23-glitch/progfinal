@@ -154,7 +154,7 @@ class DepartmentManager {
 public class EmployeeDatabaseApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        DepartmentManager manager = new DepartmentManager("ITEN03 Group1");//pakipalitan ng totoong group naten, thanksss -Lorraine
+        DepartmentManager manager = new DepartmentManager("ITEN03 Group1");//pakipalitan ng totoong group natin huhu, thanksss -Lorraine
 
         
         manager.hireEmployee("Mary Angel", 85000.0, 8.5);
@@ -229,7 +229,7 @@ public class EmployeeDatabaseApp {
                 }
             } else {
                 System.out.println("[ERROR] Invalid input. Please enter an integer.");
-                scanner.next(); //para sa inavalid input :D
+                scanner.next(); //para sa inavalid input 
             }
         } while (choice != 5);
 
